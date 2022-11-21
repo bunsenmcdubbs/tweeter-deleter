@@ -14,10 +14,10 @@ const (
 
 func AuthorizeOOB(consumerKey, consumerSecret string) (*http.Client, error) {
 	config := oauth1.Config{
-		ConsumerKey: consumerKey,
+		ConsumerKey:    consumerKey,
 		ConsumerSecret: consumerSecret,
-		CallbackURL: oobCallbackURL,
-		Endpoint: twitter.AuthorizeEndpoint,
+		CallbackURL:    oobCallbackURL,
+		Endpoint:       twitter.AuthorizeEndpoint,
 	}
 
 	reqToken, reqSecret, err := config.RequestToken()

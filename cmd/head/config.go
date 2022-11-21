@@ -5,7 +5,7 @@ import (
 )
 
 type appConfig struct {
-	ConsumerKey string `env:"TWITTER_CONSUMER_KEY,required"`
+	ConsumerKey    string `env:"TWITTER_CONSUMER_KEY,required"`
 	ConsumerSecret string `env:"TWITTER_CONSUMER_SECRET,required"`
 }
 

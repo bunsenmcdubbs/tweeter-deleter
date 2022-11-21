@@ -4,11 +4,10 @@ import (
 	"github.com/dghubble/go-twitter/twitter"
 )
 
-type Archiver struct {
+type Deleter struct {
 	Client *twitter.Client
 }
 
-func NewArchiver(client *twitter.Client) *Archiver {
-	return &Archiver{client}
+func NewDeleter(client *twitter.Client) *Deleter {
+	return &Deleter{client}
 }
-
