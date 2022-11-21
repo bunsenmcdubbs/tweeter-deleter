@@ -12,7 +12,7 @@ const (
 	oobCallbackURL = "oob"
 )
 
-func AuthorizeOOB(consumerKey, consumerSecret string) (*http.Client, error) {
+func AuthorizeOOBInteractive(consumerKey, consumerSecret string) (*http.Client, error) {
 	config := oauth1.Config{
 		ConsumerKey:    consumerKey,
 		ConsumerSecret: consumerSecret,
@@ -28,7 +28,7 @@ func AuthorizeOOB(consumerKey, consumerSecret string) (*http.Client, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println("authorizationURL: ", authorizationURL)
+	fmt.Print("Please authorize this app: ", authorizationURL, "\nEnter PIN: ")
 
 	var verifierCode string
 	fmt.Scanln(&verifierCode)
