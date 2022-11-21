@@ -9,7 +9,7 @@ type Config struct {
 	ConsumerSecret string `env:"TWITTER_CONSUMER_SECRET,required"`
 }
 
-func ParseConfig() (Config, error) {
+func ParseEnvConfig() (Config, error) {
 	cfg := Config{}
 	err := env.Parse(&cfg)
 	return cfg, err
